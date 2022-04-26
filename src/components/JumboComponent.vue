@@ -42,9 +42,11 @@ export default {
 .tools {
   position: absolute;
   top: 20%;
-  left: 97.4%;
+  left: 97.34%;
   padding: 10px 15px;
   background-color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   & a {
     color: black;
     font-size: 18px;

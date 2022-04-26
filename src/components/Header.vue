@@ -83,14 +83,14 @@ li {
   margin-right: 2rem;
   & a {
     text-decoration: none;
-    color: #08427d;
+    color: #22272d;
     font-weight: 500;
   }
 }
 li:after {
   font-family: "FontAwesome";
   content: "\f078";
-  color: #08427d;
+  color: #22272d;
   font-size: 8px;
   margin-left: 5px;
 }
@@ -114,6 +114,10 @@ li:after {
 }
 .cart {
   position: relative;
+  font-size: 18px;
+}
+.user {
+  font-size: 18px;
 }
 .alert {
   position: absolute;
