@@ -35,6 +35,19 @@
           <div class="icons d-flex align-items-center">
             <div class="cart me-4">
               <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                class="
+                  alert
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  border border-light
+                  rounded-circle
+                  p-2
+                "
+                >0</span
+              >
             </div>
             <div class="user me-4">
               <i class="fa-regular fa-circle-user"></i>
@@ -51,12 +64,11 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "HeaderComponent",
   props: {},
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .la-container {
   width: 80%;
@@ -99,5 +111,16 @@ li:after {
   position: absolute;
   right: 6px;
   top: 6px;
+}
+.cart {
+  position: relative;
+}
+.alert {
+  position: absolute;
+  background-color: #1fad95;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1px;
+  width: 4px;
 }
 </style>
