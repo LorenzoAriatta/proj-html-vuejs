@@ -64,9 +64,7 @@ export default {
 }
 .txt {
   position: relative;
-  & > p {
-    width: 80%;
-  }
+  padding: 60px 45px;
 }
 h6 {
   font-weight: 400;
@@ -79,6 +77,17 @@ h1 {
   & .span-title {
     color: #1fad95;
     font-weight: 300;
+  }
+}
+p {
+  & span {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e2e0;
+    & a {
+      color: #141423;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 }
 .content {

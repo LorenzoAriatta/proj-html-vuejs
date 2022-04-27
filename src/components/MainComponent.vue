@@ -1,8 +1,10 @@
 <template>
-  <main>
-    <div class="container-fluid">
+  <main class="container-fluid">
+    <div>
       <AboutComp />
       <UpgradeSkill />
+      <CoursesSection />
+      <TestimonialSection />
     </div>
   </main>
 </template>
@@ -10,12 +12,16 @@
 <script>
 import AboutComp from "@/components/About.vue";
 import UpgradeSkill from "@/components/UpgradeSkill.vue";
+import CoursesSection from "@/components/CoursesSection.vue";
+import TestimonialSection from "@/components/Testimonials.vue";
 
 export default {
   name: "MainCompenent",
   components: {
     AboutComp,
     UpgradeSkill,
+    CoursesSection,
+    TestimonialSection,
   },
 };
 </script>

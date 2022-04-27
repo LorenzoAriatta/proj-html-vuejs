@@ -74,6 +74,17 @@ h1 {
     font-weight: 300;
   }
 }
+p {
+  & span {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e2e0;
+    & a {
+      color: #141423;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
 .txt {
   position: relative;
   padding: 60px 45px;
@@ -88,13 +99,11 @@ h1 {
   border-radius: 50%;
   border: 7px solid #ecc5ab;
 }
-.link {
-  color: #141423;
-  font-weight: bold;
-  text-decoration-color: #e2e2e0;
-}
 .content {
   position: relative;
+  & > img {
+    box-shadow: 30px 30px 135px -50px #6c6c6d;
+  }
 }
 .youtube {
   position: absolute;
