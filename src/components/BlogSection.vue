@@ -25,36 +25,6 @@
             </p>
           </div>
         </div>
-        <!-- <div class="blog-card">
-          <img
-            class="w-100"
-            src="@/assets/artist-blog-01-480x325.jpg"
-            alt="blog2"
-          />
-          <h6>ARTIST</h6>
-          <h3>Pocket-Sized Nootebooks Hold Miniature Paintings</h3>
-          <div>
-            <p class="d-inline me-3">
-              <i class="fa-regular fa-calendar"></i> May 15, 2020
-            </p>
-            <p class="d-inline"><i class="fa-regular fa-eye"></i> 603 views</p>
-          </div>
-        </div>
-        <div class="blog-card">
-          <img
-            class="w-100"
-            src="@/assets/artist-blog-02-480x325.jpg"
-            alt="blog3"
-          />
-          <h6>ARTIST</h6>
-          <h3>Connection Between Self-Portraits and Identity</h3>
-          <div>
-            <p class="d-inline me-3">
-              <i class="fa-regular fa-calendar"></i> May 15, 2020
-            </p>
-            <p class="d-inline"><i class="fa-regular fa-eye"></i> 397 views</p>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>

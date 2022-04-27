@@ -7,6 +7,7 @@
       <TestimonialSection />
       <CoachSection />
       <BlogSection />
+      <SubscribeSection />
     </div>
   </main>
 </template>
@@ -18,6 +19,7 @@ import CoursesSection from "@/components/CoursesSection.vue";
 import TestimonialSection from "@/components/Testimonials.vue";
 import CoachSection from "@/components/CoachSection.vue";
 import BlogSection from "@/components/BlogSection.vue";
+import SubscribeSection from "@/components/SubscribeSection.vue";
 
 export default {
   name: "MainCompenent",
@@ -28,6 +30,7 @@ export default {
     TestimonialSection,
     CoachSection,
     BlogSection,
+    SubscribeSection,
   },
 };
 </script>

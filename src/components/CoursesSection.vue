@@ -1,5 +1,5 @@
 <template>
-  <section class="container-fluid">
+  <section class="container-fluid py-5">
     <div class="la-container row flex-column align-items-center">
       <div class="txt text-center col-6">
         <h6>JOIN MAXCOACH AT BEST</h6>
