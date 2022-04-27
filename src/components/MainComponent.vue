@@ -1,10 +1,12 @@
 <template>
-  <main class="container-fluid">
+  <main>
     <div>
       <AboutComp />
       <UpgradeSkill />
       <CoursesSection />
       <TestimonialSection />
+      <CoachSection />
+      <BlogSection />
     </div>
   </main>
 </template>
@@ -14,6 +16,8 @@ import AboutComp from "@/components/About.vue";
 import UpgradeSkill from "@/components/UpgradeSkill.vue";
 import CoursesSection from "@/components/CoursesSection.vue";
 import TestimonialSection from "@/components/Testimonials.vue";
+import CoachSection from "@/components/CoachSection.vue";
+import BlogSection from "@/components/BlogSection.vue";
 
 export default {
   name: "MainCompenent",
@@ -22,6 +26,8 @@ export default {
     UpgradeSkill,
     CoursesSection,
     TestimonialSection,
+    CoachSection,
+    BlogSection,
   },
 };
 </script>
