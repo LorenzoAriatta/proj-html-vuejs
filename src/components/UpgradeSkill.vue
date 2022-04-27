@@ -83,6 +83,9 @@ p {
       text-decoration: none;
       font-weight: bold;
     }
+    a:hover {
+      color: #1fad95;
+    }
   }
 }
 .txt {
@@ -109,6 +112,9 @@ p {
   position: absolute;
   top: 36%;
   left: 41%;
+}
+.youtube:hover {
+  filter: grayscale(20%);
 }
 .grid-circle {
   position: absolute;

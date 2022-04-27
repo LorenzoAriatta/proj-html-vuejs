@@ -88,6 +88,9 @@ p {
       text-decoration: none;
       font-weight: bold;
     }
+    a:hover {
+      color: #1fad95;
+    }
   }
 }
 .content {
@@ -105,7 +108,7 @@ p {
 }
 .round-shape {
   position: absolute;
-  left: 72%;
+  left: 70%;
   top: 90%;
 }
 .data {
@@ -117,11 +120,5 @@ p {
   & h6 {
     font-weight: bold;
   }
-}
-.link {
-  color: #1fad95;
-  font-weight: bold;
-  margin-bottom: 50px;
-  text-decoration-color: #e2e2e0;
 }
 </style>

@@ -54,5 +54,8 @@ p > span {
     text-decoration: none;
     color: #141423;
   }
+  a:hover {
+    color: #1fad95;
+  }
 }
 </style>

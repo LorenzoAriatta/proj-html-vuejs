@@ -94,6 +94,13 @@ li:after {
   font-size: 8px;
   margin-left: 5px;
 }
+ul li:hover {
+  border-bottom: 3px solid #1fad95;
+  padding-bottom: 30px;
+  & a {
+    color: #1fad95;
+  }
+}
 .search-wrapper {
   display: inline-block;
   position: relative;

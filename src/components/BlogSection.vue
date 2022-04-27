@@ -88,8 +88,17 @@ h1 {
     font-weight: 300;
   }
 }
+p {
+  color: #6c6c6d;
+  font-size: 14px;
+  font-weight: 400;
+}
 .blog-card {
   padding: 10px;
   width: calc(100% / 3 - 10px);
+}
+img:hover {
+  filter: grayscale(40%);
+  transition: 0.4s;
 }
 </style>

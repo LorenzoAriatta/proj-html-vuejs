@@ -46,6 +46,9 @@ h5 {
       text-decoration: none;
       color: #141423;
     }
+    a:hover {
+      color: #1fad95;
+    }
   }
 }
 h1 {

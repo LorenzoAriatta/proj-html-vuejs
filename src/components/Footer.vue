@@ -23,16 +23,27 @@
           </div>
         </div>
         <div class="col-6 links">
-          <div class="explore d-flex flex-column flex-wrap">
-            <ul>
-              <h5>Explore</h5>
-              <li><a href="#">Star here</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Success story</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
+          <div class="d-flex flex-row">
+            <div class="col-4 d-flex flex-column flex-wrap">
+              <ul>
+                <h5>Explore</h5>
+                <li><a href="#">Star here</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Success story</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-8">
+              <ul>
+                <h5>Information</h5>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Purchase guide</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of service</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -61,14 +72,22 @@ p {
   color: #b1b1b0;
   font-size: 14px;
 }
-a {
+.icon a {
   color: #b1b1b0;
-  font-size: 26px;
+  font-size: 35px;
+  & i:hover {
+    color: #1fad95;
+    transform: scale(1.1);
+  }
 }
 li {
   list-style-type: none;
   & a {
+    color: #b1b1b0;
     text-decoration: none;
+  }
+  & a:hover {
+    color: #1fad95;
   }
 }
 </style>
