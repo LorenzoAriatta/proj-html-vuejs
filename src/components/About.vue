@@ -1,5 +1,5 @@
 <template>
-  <div class="la-container flex-column py-5">
+  <div class="la-container py-5">
     <div class="row">
       <div class="txt col-5">
         <h6>EVERYTHING IN <strong class="fw-bold">MAXCOACH</strong></h6>
@@ -7,7 +7,7 @@
           Learn about our <span class="span-title">Work Culture</span> at
           MaxCoach
         </h1>
-        <p>
+        <p class="mb-5">
           Spend some time to visit our website or head office and discover our
           current courses, enrollment precedure, and registration deadline.
           We're opening new classes every beginning of each month.
@@ -64,16 +64,9 @@ export default {
 }
 .txt {
   position: relative;
-}
-.circle {
-  position: absolute;
-  bottom: 90%;
-  left: 100%;
-  height: 60px;
-  width: 60px;
-  background-color: white;
-  border-radius: 50%;
-  border: 7px solid #ecc5ab;
+  & > p {
+    width: 80%;
+  }
 }
 h6 {
   font-weight: 400;
@@ -115,5 +108,11 @@ h1 {
   & h6 {
     font-weight: bold;
   }
+}
+.link {
+  color: #1fad95;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-decoration-color: #e2e2e0;
 }
 </style>
