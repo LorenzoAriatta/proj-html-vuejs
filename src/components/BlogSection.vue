@@ -8,25 +8,27 @@
         </div>
       </div>
       <div class="row">
-        <div class="blog-card">
+        <div v-for="blog in blogs" :key="blog.id" class="blog-card">
           <img
-            class="w-100"
-            src="@/assets/artist-blog-03-480x325.jpeg"
-            alt="blog1"
+            class="w-100 rounded mb-3"
+            :src="require(`@/assets/${blog.image}.jpg`)"
+            :alt="blog.title"
           />
-          <h6>ARTIST</h6>
-          <h3>Brush Strokes Energize Trees in Painting</h3>
+          <h6>{{ blog.type }}</h6>
+          <h3 class="mb-3">{{ blog.title }}</h3>
           <div>
             <p class="d-inline me-3">
-              <i class="fa-regular fa-calendar"></i> May 15, 2020
+              <i class="fa-regular fa-calendar"></i> {{ blog.date }}
             </p>
-            <p class="d-inline"><i class="fa-regular fa-eye"></i> 688 views</p>
+            <p class="d-inline">
+              <i class="fa-regular fa-eye"></i> {{ blog.views }}
+            </p>
           </div>
         </div>
-        <div class="blog-card">
+        <!-- <div class="blog-card">
           <img
             class="w-100"
-            src="@/assets/artist-blog-02-480x325.jpeg"
+            src="@/assets/artist-blog-01-480x325.jpg"
             alt="blog2"
           />
           <h6>ARTIST</h6>
@@ -41,7 +43,7 @@
         <div class="blog-card">
           <img
             class="w-100"
-            src="@/assets/artist-blog-03-480x325.jpeg"
+            src="@/assets/artist-blog-02-480x325.jpg"
             alt="blog3"
           />
           <h6>ARTIST</h6>
@@ -52,7 +54,7 @@
             </p>
             <p class="d-inline"><i class="fa-regular fa-eye"></i> 397 views</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -65,7 +67,7 @@ export default {
     return {
       blogs: [
         {
-          path_image: "@/assets/artist-blog-03-480x325.jpeg",
+          image: "blog-03",
           type: "ARTIST",
           title: "Brush Strokes Energize Trees in Painting",
           date: "May 15, 2020",
@@ -73,7 +75,7 @@ export default {
           id: 0,
         },
         {
-          path_image: "@/assets/artist-blog-02-480x325.jpeg",
+          image: "blog-01",
           type: "ARTIST",
           title: "Pocket-Sized Nootebooks Hold Miniature Paintings",
           date: "May 15, 2020",
@@ -81,7 +83,7 @@ export default {
           id: 1,
         },
         {
-          path_image: "@/assets/artist-blog-01-480x325.jpeg",
+          image: "blog-02",
           type: "ARTIST",
           title: "Connection Between Self-Portraits and Identity",
           date: "May 15, 2020",
