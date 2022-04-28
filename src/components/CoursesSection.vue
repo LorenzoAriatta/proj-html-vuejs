@@ -50,7 +50,7 @@ export default {
 svg {
   position: absolute;
   width: 100%;
-  top: 89.3%;
+  top: 89.6%;
   right: 0%;
   filter: invert(1);
 }

@@ -1,8 +1,8 @@
 <template>
   <div
     class="row card-testimonial"
-    @click="changeCard(index)"
-    :class="selectedCard(index)"
+    @click="activate(item.id)"
+    :class="isActive === item.id ? 'absolute-center' : 'default-position'"
   >
     <div class="col-12">
       <h5>{{ item.title }}</h5>
@@ -29,6 +29,7 @@ export default {
   name: "TestimonialsItem",
   data() {
     return {
+      isActive: 0,
       indexSelected: 0,
     };
   },
@@ -44,10 +45,8 @@ export default {
     debug() {
       console.log(this.index);
     },
-    changeCard(index) {
-      if (this.indexSelected !== index) {
-        this.indexSelected = index;
-      }
+    activate(id) {
+      this.isActive = id;
     },
     selectedCard(index) {
       if (this.indexSelected === index) {

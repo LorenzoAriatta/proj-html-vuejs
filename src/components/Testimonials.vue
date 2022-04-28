@@ -46,6 +46,8 @@ export default {
           image: "testimonial-01",
           name: "MADLEY PONDOR",
           work: "/ IT Specialist",
+          active: true,
+          id: 0,
           title:
             "Professional team of specialists and passionate mentors at reach",
           review:
@@ -55,6 +57,8 @@ export default {
           image: "testimonial-02",
           name: "MINA HOLLACE",
           work: "/ Freelancer",
+          active: false,
+          id: 1,
           title:
             "Professional team of specialists and passionate mentors at reach",
           review:
@@ -64,6 +68,8 @@ export default {
           image: "testimonial-03",
           name: "JON DOE",
           work: "/ IT Specialist",
+          active: false,
+          id: 2,
           title:
             "Professional team of specialists and passionate mentors at reach",
           review:

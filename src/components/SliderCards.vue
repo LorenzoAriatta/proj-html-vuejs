@@ -13,11 +13,31 @@
     </div>
     <div class="row btn-slide mt-5">
       <div>
-        <button @click="slideCard(0, 2)" class="dot me-3"></button>
-        <button @click="slideCard(1, 3)" class="dot me-3"></button>
-        <button @click="slideCard(2, 4)" class="dot me-3"></button>
-        <button @click="slideCard(3, 5)" class="dot me-3"></button>
-        <button @click="slideCard(4, 6)" class="dot me-3"></button>
+        <button
+          @click="slideCard(0, 2)"
+          :class="selectedBtn(0)"
+          class="dot me-3"
+        ></button>
+        <button
+          @click="slideCard(1, 3)"
+          :class="selectedBtn(1)"
+          class="dot me-3"
+        ></button>
+        <button
+          @click="slideCard(2, 4)"
+          :class="selectedBtn(2)"
+          class="dot me-3"
+        ></button>
+        <button
+          @click="slideCard(3, 5)"
+          :class="selectedBtn(3)"
+          class="dot me-3"
+        ></button>
+        <button
+          @click="slideCard(4, 6)"
+          :class="selectedBtn(4)"
+          class="dot me-3"
+        ></button>
       </div>
     </div>
   </div>
@@ -31,6 +51,12 @@ export default {
   },
   name: "SliderCards",
   methods: {
+    selectedBtn(num) {
+      if (this.min === num) {
+        return "active";
+      }
+      return "dot";
+    },
     slideCard(a, b) {
       this.min = a;
       this.max = b;
@@ -43,7 +69,7 @@ export default {
           this.max = 2;
           this.min = 0;
         }
-      }, 10000);
+      }, 8000);
       console.log(this.min, this.max, timer);
     },
   },
@@ -135,9 +161,13 @@ export default {
   border: none;
 }
 .btn-slide .dot:hover {
-  transition: 0.2s;
+  transition: 0.3s;
   transform: scale(2);
-  background-color: black;
+  background-color: #1fad95;
+}
+.active {
+  transform: scale(2);
+  background-color: #1fad95;
 }
 .btn-slide {
   text-align: -webkit-center;
