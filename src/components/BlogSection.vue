@@ -69,7 +69,7 @@ export default {
 <style scoped lang="scss">
 .container-fluid {
   margin-top: 100px;
-  background-color: #e2e2e0;
+  background-color: #f1f1f0;
 }
 .la-container {
   width: 65%;

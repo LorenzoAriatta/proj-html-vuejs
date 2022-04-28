@@ -1,11 +1,21 @@
 <template>
-  <section class="container-fluid py-5">
+  <section id="svg-shape" class="container-fluid py-5">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      height="100"
+    >
+      <path class="elementor-shape-fill" d="M0 0v100h100V0Q50 200 0 0" />
+    </svg>
+
     <div class="la-container row flex-column align-items-center">
       <div class="txt text-center col-6">
         <h6>JOIN MAXCOACH AT BEST</h6>
         <h1>Latest Online <span class="span-title">Courses</span></h1>
       </div>
-      <div class="col-6 text-center">
+      <SliderCards />
+      <div class="col-6 text-center mt-5">
         <h5>
           Control your personal preference settings to get notified about
           appropriate courses.
@@ -20,7 +30,12 @@
 </template>
 
 <script>
+import SliderCards from "@/components/SliderCards.vue";
+
 export default {
+  components: {
+    SliderCards,
+  },
   name: "CoursesSection",
 };
 </script>
@@ -30,10 +45,20 @@ export default {
   width: 65%;
   margin: 0 auto;
 }
-// .container-fluid {
-//   background-image: url(@/assets/svg-1.svg);
-//   background-repeat: no-repeat;
-// }
+#svg-shape {
+  position: relative;
+}
+svg {
+  position: absolute;
+  width: 100%;
+  top: 88.7%;
+  right: 0%;
+  filter: invert(1);
+}
+.container-fluid {
+  background: linear-gradient(#ffffff, #e2e2e0);
+  background-repeat: no-repeat;
+}
 h6,
 h5 {
   font-weight: 400;
