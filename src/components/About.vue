@@ -25,9 +25,18 @@
         </div>
       </div>
       <div class="content col-7 d-flex justify-content-end">
-        <img class="rounded" src="@/assets/stock-full-hd-10.jpg" alt="#" />
+        <img
+          class="rounded"
+          style="height: 450px"
+          src="@/assets/stock-full-hd-10.jpg"
+          alt="#"
+        />
         <div class="img-desi">
-          <img class="rounded" src="@/assets/about-us-01.jpg" alt="#" />
+          <img
+            class="rounded img-about"
+            src="@/assets/about-us-01.jpg"
+            alt="#"
+          />
         </div>
         <div class="round-shape">
           <img src="@/assets/maxcoach-shape-02.png" alt="#" />
@@ -109,10 +118,10 @@ p {
 .round-shape {
   position: absolute;
   left: 70%;
-  top: 90%;
+  top: 77%;
 }
 .data {
-  margin-top: 100px;
+  margin: 50px 0px;
   & h1 {
     color: #1fad95;
     font-weight: 700;

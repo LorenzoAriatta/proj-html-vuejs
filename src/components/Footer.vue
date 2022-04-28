@@ -27,21 +27,17 @@
             <div class="col-4 d-flex flex-column flex-wrap">
               <ul>
                 <h5>Explore</h5>
-                <li><a href="#">Star here</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Success story</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li v-for="(link, index) in exploreLinks" :key="link.index">
+                  <a href="#">{{ exploreLinks[index] }}</a>
+                </li>
               </ul>
             </div>
             <div class="col-8">
               <ul>
                 <h5>Information</h5>
-                <li><a href="#">Membership</a></li>
-                <li><a href="#">Purchase guide</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Terms of service</a></li>
+                <li v-for="(link, index) in informationLinks" :key="link.index">
+                  <a href="#">{{ informationLinks[index] }}</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -54,6 +50,24 @@
 <script>
 export default {
   name: "FooterComp",
+  data() {
+    return {
+      exploreLinks: [
+        "Start here",
+        "Blog",
+        "About us",
+        "Sussess story",
+        "Courses",
+        "Contact us",
+      ],
+      informationLinks: [
+        "Membership",
+        "Purchase guide",
+        "Privacy policy",
+        "Terms of service",
+      ],
+    };
+  },
 };
 </script>
 
@@ -88,6 +102,7 @@ li {
   }
   & a:hover {
     color: #1fad95;
+    font-weight: 400;
   }
 }
 </style>

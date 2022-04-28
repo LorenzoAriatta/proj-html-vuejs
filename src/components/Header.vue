@@ -5,23 +5,8 @@
         <div class="col-5 d-flex">
           <nav>
             <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Pages</a>
-              </li>
-              <li>
-                <a href="#">Courses</a>
-              </li>
-              <li>
-                <a href="#">Features</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Shop</a>
+              <li v-for="(link, index) in linkHeader" :key="link.index">
+                <a href="#">{{ linkHeader[index] }}</a>
               </li>
             </ul>
           </nav>
@@ -65,7 +50,11 @@
 <script>
 export default {
   name: "HeaderComponent",
-  props: {},
+  data() {
+    return {
+      linkHeader: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
+    };
+  },
 };
 </script>
 
