@@ -6,11 +6,18 @@
         :key="index"
         :card="card"
         :cards="cards"
+        :index="index"
+        :min="min"
+        :max="max"
       />
     </div>
     <div class="row btn-slide mt-5">
       <div>
-        <button @click="slideNext()" class="dot"></button>
+        <button @click="slideCard(0, 2)" class="dot me-3"></button>
+        <button @click="slideCard(1, 3)" class="dot me-3"></button>
+        <button @click="slideCard(2, 4)" class="dot me-3"></button>
+        <button @click="slideCard(3, 5)" class="dot me-3"></button>
+        <button @click="slideCard(4, 6)" class="dot me-3"></button>
       </div>
     </div>
   </div>
@@ -24,50 +31,30 @@ export default {
   },
   name: "SliderCards",
   methods: {
-    slideNext() {
-      this.slideIndex++;
-      console.log(this.slideIndex);
-      if (this.slideIndex > this.cards.length - 1) {
-        this.slideIndex = 0;
-        for (let i = 0; i < this.cards.length; i++) {
-          if (this.cards[i].value == true) {
-            this.cardsTrue.push(this.cards);
-            this.cardsTrue[0].value = false;
-            console.log(this.cardsTrue);
-          }
+    slideCard(a, b) {
+      this.min = a;
+      this.max = b;
+    },
+    autoPlay() {
+      const timer = setInterval(() => {
+        this.min++;
+        this.max++;
+        if (this.max >= 6 && this.min >= 4) {
+          this.max = 2;
+          this.min = 0;
         }
-      }
+      }, 10000);
+      console.log(this.min, this.max, timer);
     },
-    slidePrev() {
-      this.slideIndex--;
-      if (this.slideIndex < 0) {
-        this.slideIndex = this.cards.length - 1;
-      }
-    },
+  },
+  mounted() {
+    //this.autoPlay();
   },
   data() {
     return {
-      cardsTrue: [],
+      min: 0,
+      max: 2,
       cards: [
-        {
-          img: "course-04",
-          price: "$0.",
-          course: "Introduction to Cybersecurity",
-          lessons: "21 Lessons",
-          students: "520 Students",
-          id: 5,
-          value: false,
-          promotion: true,
-        },
-        {
-          img: "course-03",
-          price: "$520.",
-          course: "Postgraduate Certificate in Data Analytics",
-          lessons: "42 Lessons",
-          students: "48 Students",
-          id: 6,
-          value: false,
-        },
         {
           img: "course-01",
           price: "$40.",
@@ -108,10 +95,29 @@ export default {
         {
           img: "course-05",
           price: "$180.",
-          course: "Data Analysis: Computer Simulation",
+          course: "Certificate in Data Analysis: Computer Simulation",
           lessons: "28 Lessons",
           students: "389 Students",
           id: 4,
+          value: false,
+        },
+        {
+          img: "course-04",
+          price: "$0.",
+          course: "Introduction to Cybersecurity: Beginner to Intermediate",
+          lessons: "21 Lessons",
+          students: "520 Students",
+          id: 5,
+          value: false,
+          promotion: true,
+        },
+        {
+          img: "course-03",
+          price: "$520.",
+          course: "Postgraduate Certificate in Data Analytics",
+          lessons: "42 Lessons",
+          students: "48 Students",
+          id: 6,
           value: false,
         },
       ],

@@ -1,5 +1,9 @@
 <template>
-  <div v-if="card.value == true" class="mx-2 la-card" style="width: 24rem">
+  <div
+    v-if="index <= max && index >= min"
+    class="mx-2 la-card"
+    style="width: 24rem"
+  >
     <div class="box rounded border-0">
       <div class="img-hover-zoom">
         <img
@@ -30,6 +34,9 @@ export default {
   name: "CardItem",
   props: {
     card: Object,
+    index: Number,
+    max: Number,
+    min: Number,
   },
   methods: {
     // debug() {
@@ -59,6 +66,9 @@ span {
 .card-img-top {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+.card-body {
+  min-height: 190px;
 }
 .box {
   position: relative;
