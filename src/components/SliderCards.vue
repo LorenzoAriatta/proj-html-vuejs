@@ -48,7 +48,7 @@ export default {
     },
   },
   mounted() {
-    //this.autoPlay();
+    this.autoPlay();
   },
   data() {
     return {
