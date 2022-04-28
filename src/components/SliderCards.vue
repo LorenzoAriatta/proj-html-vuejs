@@ -1,6 +1,6 @@
 <template>
   <div class="la-container">
-    <div class="row flex-nowrap justify-content-center">
+    <div class="row flex-nowrap justify-content-center wrapp-card">
       <CardItem
         v-for="(card, index) in cards"
         :key="index"
@@ -133,6 +133,11 @@ export default {
   background-color: #b1b1b0;
   border-radius: 50%;
   border: none;
+}
+.btn-slide .dot:hover {
+  transition: 0.2s;
+  transform: scale(2);
+  background-color: black;
 }
 .btn-slide {
   text-align: -webkit-center;

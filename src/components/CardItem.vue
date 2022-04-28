@@ -2,7 +2,7 @@
   <div
     v-if="index <= max && index >= min"
     class="mx-2 la-card"
-    style="width: 24rem"
+    style="width: 21rem"
   >
     <div class="box rounded border-0">
       <div class="img-hover-zoom">
@@ -14,7 +14,7 @@
       </div>
       <div v-if="card.promotion == true" class="ribbon"><span>FREE</span></div>
     </div>
-    <div class="card-body bg-white rounded">
+    <div class="card-body bg-white">
       <h4>{{ card.price }}<span>00</span></h4>
       <h5 class="card-text mt-2 mb-5">{{ card.course }}</h5>
       <div>
@@ -38,14 +38,6 @@ export default {
     max: Number,
     min: Number,
   },
-  methods: {
-    // debug() {
-    //   console.log(this.card);
-    // },
-  },
-  // mounted() {
-  //   this.debug();
-  // },
 };
 </script>
 
@@ -68,7 +60,9 @@ span {
   border-top-right-radius: 5px;
 }
 .card-body {
-  min-height: 190px;
+  min-height: 220px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .box {
   position: relative;
@@ -123,13 +117,21 @@ span {
   border-top: 3px solid #8f0808;
 }
 .img-hover-zoom {
-  height: 220px;
+  height: 205px;
   overflow: hidden;
 }
 .img-hover-zoom img {
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
-.la-card:hover .img-hover-zoom img {
-  transform: scale(1.5);
+.la-card {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+.la-card:hover {
+  transition: 0.4s;
+  box-shadow: 32px 28px 50px -40px black;
+  & .img-hover-zoom img {
+    transform: scale(1.3);
+  }
 }
 </style>
