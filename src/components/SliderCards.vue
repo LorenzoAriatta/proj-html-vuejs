@@ -2,15 +2,15 @@
   <div class="la-container">
     <div class="row flex-nowrap justify-content-center">
       <CardItem
-        v-for="card in cards"
-        :key="card.id"
+        v-for="(card, index) in cards"
+        :key="index"
         :card="card"
         :cards="cards"
       />
     </div>
     <div class="row btn-slide mt-5">
       <div>
-        <div class="dot"></div>
+        <button @click="slideNext()" class="dot"></button>
       </div>
     </div>
   </div>
@@ -23,17 +23,41 @@ export default {
     CardItem,
   },
   name: "SliderCards",
+  methods: {
+    slideNext() {
+      this.slideIndex++;
+      console.log(this.slideIndex);
+      if (this.slideIndex > this.cards.length - 1) {
+        this.slideIndex = 0;
+        for (let i = 0; i < this.cards.length; i++) {
+          if (this.cards[i].value == true) {
+            this.cardsTrue.push(this.cards);
+            this.cardsTrue[0].value = false;
+            console.log(this.cardsTrue);
+          }
+        }
+      }
+    },
+    slidePrev() {
+      this.slideIndex--;
+      if (this.slideIndex < 0) {
+        this.slideIndex = this.cards.length - 1;
+      }
+    },
+  },
   data() {
     return {
+      cardsTrue: [],
       cards: [
         {
           img: "course-04",
-          price: "$60.",
+          price: "$0.",
           course: "Introduction to Cybersecurity",
           lessons: "21 Lessons",
           students: "520 Students",
           id: 5,
           value: false,
+          promotion: true,
         },
         {
           img: "course-03",
@@ -102,6 +126,7 @@ export default {
   height: 8px;
   background-color: #b1b1b0;
   border-radius: 50%;
+  border: none;
 }
 .btn-slide {
   text-align: -webkit-center;

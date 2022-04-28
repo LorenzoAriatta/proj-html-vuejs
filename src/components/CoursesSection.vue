@@ -1,21 +1,12 @@
 <template>
   <section id="svg-shape" class="container-fluid py-5">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-      height="100"
-    >
-      <path class="elementor-shape-fill" d="M0 0v100h100V0Q50 200 0 0" />
-    </svg>
-
     <div class="la-container row flex-column align-items-center">
       <div class="txt text-center col-6">
         <h6>JOIN MAXCOACH AT BEST</h6>
         <h1>Latest Online <span class="span-title">Courses</span></h1>
       </div>
       <SliderCards />
-      <div class="col-6 text-center mt-5">
+      <div id="link" class="col-6 text-center mt-5">
         <h5>
           Control your personal preference settings to get notified about
           appropriate courses.
@@ -26,6 +17,14 @@
         </h5>
       </div>
     </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      height="100"
+    >
+      <path class="elementor-shape-fill" d="M0 0v100h100V0Q50 200 0 0" />
+    </svg>
   </section>
 </template>
 
@@ -51,7 +50,7 @@ export default {
 svg {
   position: absolute;
   width: 100%;
-  top: 88.7%;
+  top: 89.3%;
   right: 0%;
   filter: invert(1);
 }
@@ -84,6 +83,9 @@ h1 {
     color: #1fad95;
     font-weight: 300;
   }
+}
+#link {
+  margin-bottom: 45px;
 }
 .txt {
   position: relative;

@@ -1,11 +1,13 @@
 <template>
-  <div v-if="card.value == true" class="mx-2" style="width: 24rem">
+  <div v-if="card.value == true" class="mx-2 la-card" style="width: 24rem">
     <div class="box rounded border-0">
-      <img
-        :src="require(`@/assets/${card.img}.jpg`)"
-        class="card-img-top w-100"
-        alt=""
-      />
+      <div class="img-hover-zoom">
+        <img
+          :src="require(`@/assets/${card.img}.jpg`)"
+          class="card-img-top w-100"
+          alt=""
+        />
+      </div>
       <div v-if="card.promotion == true" class="ribbon"><span>FREE</span></div>
     </div>
     <div class="card-body bg-white rounded">
@@ -30,13 +32,13 @@ export default {
     card: Object,
   },
   methods: {
-    debug() {
-      console.log(this.card);
-    },
+    // debug() {
+    //   console.log(this.card);
+    // },
   },
-  mounted() {
-    this.debug();
-  },
+  // mounted() {
+  //   this.debug();
+  // },
 };
 </script>
 
@@ -109,5 +111,15 @@ span {
   border-right: 3px solid #ee7455;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #8f0808;
+}
+.img-hover-zoom {
+  height: 220px;
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+.la-card:hover .img-hover-zoom img {
+  transform: scale(1.5);
 }
 </style>
