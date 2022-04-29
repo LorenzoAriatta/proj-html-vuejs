@@ -47,9 +47,16 @@ export default {
     },
     activate(id) {
       this.isActive = id;
+      let selected = document.querySelector(".absolute-center");
+      selected.classList.remove("absolute-center");
+      selected.classList.add("default-position");
     },
     selectedCard(index) {
-      if (this.indexSelected === index) {
+      if (
+        this.indexSelected === 0 &&
+        this.indexSelected !== 1 &&
+        this.indexSelected !== 2
+      ) {
         return "absolute-center";
       } else if (this.indexSelected !== index) {
         return "default-position";
